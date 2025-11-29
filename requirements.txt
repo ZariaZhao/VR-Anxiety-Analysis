@@ -1,0 +1,43 @@
+Core Data Science
+pandas>=1.5.0
+numpy>=1.23.0
+scipy>=1.9.0
+
+Machine Learning
+scikit-learn>=1.2.0
+
+Statistics
+pingouin>=0.5.3
+
+Visualization
+matplotlib>=3.6.0
+seaborn>=0.12.0
+
+Data Loading
+openpyxl>=3.0.10
+
+Jupyter (optional)
+jupyter>=1.0.0
+ipykernel>=6.16.0
+
+text
+
+---
+
+## ✅ **Action Checklist (Execute in Order)**
+
+### **Step 1: Test in Colab (30 minutes)**
+
+1. **Open Google Colab**
+   - Visit https://colab.research.google.com
+
+2. **Create a new notebook**
+   - Copy all code from "File 2" above
+   - Paste into Colab
+
+3. **Run tests**
+Cell 1 → Read introduction
+Cell 2 → Install packages (wait 1 minute)
+Cell 3 → Upload your 001.xlsx file
+Cell 4-8 → Run sequentially, check results
+Cell 9 → Download generated charts
