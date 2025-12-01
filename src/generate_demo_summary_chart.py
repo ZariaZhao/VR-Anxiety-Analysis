@@ -172,7 +172,7 @@ def create_validation_summary_chart():
             ha='center', fontsize=9, style='italic', color='gray')
     
     # ==================== SAVE FIGURE ====================
-    # 确保outputs文件夹存在
+    # make sure outputs exist
     output_dir = 'outputs'
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
@@ -208,13 +208,3 @@ if __name__ == "__main__":
     print("=" * 70)
     print("✓ Chart generation complete!")
     print("=" * 70)
-    print("\n💡 Use this chart in:")
-    print("   • README.md (visual summary)")
-    print("   • Portfolio website")
-    print("   • Interview presentations")
-    print("   • GitHub repository showcase")
-    print("\n📋 Next steps:")
-    print("   1. View the generated chart")
-    print("   2. Add to README: ![Demo Validation](outputs/demo_validation_summary.png)")
-    print("   3. Commit to GitHub: git add outputs/demo_validation_summary.png")
-    print("=" * 70 + "\n")
