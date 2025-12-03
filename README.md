@@ -371,7 +371,7 @@ Selected features: ['HeartRateB', 'Neuroticism', 'HeartRateA', ...]
 
 ### Visual Validation Summary
 
-![Demo Validation](outputs/demo_validation_summary.png)
+![Demo Validation](outputs/demo_validation_results.png)
 
 *Figure: Comprehensive validation of core findings across simplified configuration (5 features vs. 40+ in full research). **Top-left**: Feature importance comparison confirms HeartRateB dominance (56.2% demo vs. 52.7% thesis = 93.3% consistency). **Top-right**: RMSE difference of 0.030 (11.9%) within acceptable tolerance. **Bottom-left**: Three consistency metrics all exceed 88%, meeting "excellent" threshold. **Bottom-right**: Executive summary validates reproducibility despite 87% feature reduction.*
 
