@@ -476,7 +476,7 @@ To recreate the 4-panel visualization:
 python src/generate_demo_summary_chart.py
 ```
 
-**Output**: `outputs/demo_validation_summary.png` (4200×2400 px, 300 DPI, publication-ready)
+**Output**: `outputs/demo_validation_results.png` (4200×2400 px, 300 DPI, publication-ready)
 
 ---
 
