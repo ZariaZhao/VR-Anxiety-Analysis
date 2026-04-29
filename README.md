@@ -7,7 +7,6 @@ Physiological Biomarker Validation for Wearable-Based Anxiety Screening
 [![Status](https://img.shields.io/badge/Status-Exploratory%20Research-purple)]()
 [![Interactive Demo](https://img.shields.io/badge/Demo-Interactive%20Viz-orange)](https://zariazhao.github.io/VR-Anxiety-Analysis/phenotype_explorer.html)
 
-[English](#-vr-speech-anxiety-analysis) | [中文说明](#-项目简介中文)
 
 ---
 
