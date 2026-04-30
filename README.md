@@ -57,8 +57,8 @@ Physiological Biomarker Validation for Wearable-Based Anxiety Screening
 
 ### The Problem
 
-Public speaking anxiety affects 63.9% of university students [1], yet existing
-interventions face two fundamental limitations:
+Public speaking anxiety is among the most prevalent social fears in university populations, yet existing interventions 
+face two fundamental limitations:
 
 **Measurement gap**: Over-reliance on self-report questionnaires misses
 subclinical anxiety — 30% of individuals show normal self-reports while
@@ -100,9 +100,6 @@ Enables objective anxiety assessment without sole reliance on questionnaires.
 
 ---
 
-> [1] Maricuțoiu et al. (2020). Public speaking anxiety prevalence among
-> university students. *Journal reference placeholder — replace with your
-> actual citation.*
 
 ## 🔑 Key Findings
 
@@ -111,9 +108,9 @@ Enables objective anxiety assessment without sole reliance on questionnaires.
 | **Scenario manipulation valid** | Repeated measures ANOVA | Pleasure η²=0.290, Arousal η²=0.298, both p<0.001 |
 | **Scenarios affect internal experience** | Repeated measures ANOVA | Subjective performance η²=0.050 vs objective η²=0.003 |
 | **Pleasure drives self-perceived performance** | Pearson correlation | r²=0.217, p<0.05 — strongest scenario predictor |
-| **HR transition = strongest biomarker** | Random Forest (feature importance) | HeartRate_diff_B→C = 26.3%, HeartRateB = 19.8% |
-| **HR signals dominate prediction** | Random Forest (category importance) | Heart rate = 63.9% of model predictive power |
-| **Anxiety prediction feasible** | Random Forest regression (5-fold CV) | RMSE = 0.244 ± 0.084 |
+| **HR transition = strongest biomarker** | Random Forest (feature importance) | HeartRate_diff_B→C = 22.7%, HeartRateB = 19.3% |
+| **HR signals dominate prediction** | Random Forest (category importance) | Heart rate = 64.2% of model predictive power |
+| **Anxiety prediction feasible** | Random Forest regression (5-fold CV) | RMSE = 0.244 ± 0.086 |
 | **Neuroticism links to anxiety > performance** | Pearson correlation | Anxiety r=+0.326 vs performance r=-0.093 |
 | **30% subjective-objective dissociation** | Bland-Altman analysis | Questionnaire misses physiologically anxious individuals |
 | **Three anxiety phenotypes identified** | GMM clustering (k=3) | Comfort-Dependent 15% / Pressure-Activated 45% / Excitement-Driven 40% |
@@ -179,8 +176,8 @@ Enables objective anxiety assessment without sole reliance on questionnaires.
    │   ├── Speech rate: 4 scenarios
    │   ├── Voice stability: 4 scenarios
    │   └── Personality: Neuroticism, Extraversion, Conscientiousness
-   ├── Validation: 5-fold cross-validation (CV RMSE=0.244 ± 0.084)
-   └── Top features: HeartRate_diff_B_C (26.3%), HeartRateB (19.8%)
+   ├── Validation: 5-fold cross-validation (CV RMSE=0.244 ± 0.086)
+   └── Top features: HeartRate_diff_B_C (22.7%), HeartRateB (19.3%)
 
 5. GMM Clustering
    ├── Features: Neuroticism, HeartRate_diff_A_B, VoiceStabilityA
@@ -197,21 +194,15 @@ Enables objective anxiety assessment without sole reliance on questionnaires.
 
 ### Random Forest: Feature Importance
 
-| Rank | Feature | Importance | Signal Type |
-|------|---------|-----------|-------------|
-| 1 | HeartRate_diff_B_C | 26.3% | HR transition (B→C) |
-| 2 | HeartRateB | 19.8% | HR in depressing scenario |
-| 3 | SpeechRateC | 8.7% | Speech rate under tension |
-| 4 | VoiceStabilityD | 7.5% | Vocal stability (exciting) |
-
-**By signal category**:
-- Heart rate (scenarios + transitions): 63.9%
-- Speech rate: 18.4%
-- Voice stability: 12.3%
-- Personality traits: 5.9%
+| Signal Category | Importance | Top Feature |
+|----------------|-----------|-------------|
+| Heart Rate (scenarios + transitions) | 64.2% | HeartRate_diff_B_C (22.7%) |
+| Speech Rate (4 scenarios) | 17.1% | SpeechRateC (8.0%) |
+| Voice Stability (4 scenarios) | 12.5% | VoiceStabilityD (7.5%) |
+| Personality (Big Five) | 6.2% | Extraversion (3.0%) |
 
 **Model performance**:
-- CV RMSE: 0.244 ± 0.084 (5-fold, primary metric)
+- CV RMSE: 0.244 ± 0.086 (5-fold, primary metric)
 - Note: CV R² negative due to n=20 fold size (~4 per fold) —
   feature importance from full-data fit is the more reliable metric
 
@@ -238,6 +229,7 @@ and performance trajectories. Exploratory only — n per group is very small.*
 
 ### Phenotype Validation
 ![Phenotype Validation](vr_anxiety_outputs/phenotype_validation.png)
+
 ---
 
 ## ⚠️ Limitations
@@ -259,7 +251,7 @@ and performance trajectories. Exploratory only — n per group is very small.*
 ### Option A: Google Colab (Recommended)
 
 1. Click the Colab badge above
-2. Upload `data/001.xlsx` via the left sidebar
+2. Upload `data/vr_anxiety_processed.xlsx` via the left sidebar
 3. `Runtime` → `Run all` (~5 minutes)
 
 ### Option B: Run Locally
@@ -296,6 +288,6 @@ VR-Anxiety-Analysis/
 ├── phenotype_explorer.html           # Interactive visualisation
 ├── vr_anxiety_outputs/               # All generated figures (14 files)
 ├── data/
-│   └── 001.xlsx                      # Research data (not public)
+│   └── vr_anxiety_processed.xlsx                      # Research data (not public)
 └── README.md
 ```
